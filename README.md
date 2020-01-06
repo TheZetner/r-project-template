@@ -9,6 +9,8 @@ The folder structure helps to organize data and scripts according to their purpo
 
 1. Get the latest version one of two ways:  
     * Download a zip file of the template by clicking [![](https://raw.githubusercontent.com/TheZetner/picturehosting/master/clone-or-download.png)](#) - includes git information, be sure to change to your own config
+        * Change the remote to your new project:  ```git remote set-url origin git@github.com:<USERNAME>/<PROJECTNAME>.git```
+        
     * Click on [Releases](https://github.com/TheZetner/r-project-template/releases) above and grab the latest **Source code** zip file to your computer.  
 
 2. Unzip where you want the project to live on your computer (eg. Documents/R_projects/), rename the folder, update git information if using version control. (eg `rm .git*` will remove the git folder and ignore file)  
