@@ -1,4 +1,4 @@
-# R Project Analysis Template
+# R Project Analysis Template - Full (Master)
 _Replace this with your actual README file_
 
 This template is meant to guide and structure your analysis projects in R whether or not you use version control (github/gitlab). Feel free to delete the contents of this readme and fill it out again with [markdown formatted text](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
@@ -20,6 +20,17 @@ The folder structure helps to organize data and scripts according to their purpo
 4. Click _File>New Project...>Existing Directory_  
 
 5. Select the unzipped template folder then _Create Project_  
+
+## Project Setup with this Template and the Command Line
+
+1. Clone into your project folder with whatever branch you want to choose: eg. minimal or master  
+    ```git clone --single-branch --branch <branchname> git@github.com:TheZetner/r-project-template.git <foldername>```  
+2. Modify remotes to your new project's repository: 
+    ```
+    git remote rename origin old-origin
+    git remote add origin https://github.com/TheZetner/<newreponame>
+    ```  
+3. Commit and push as normal
 
 Start working!
 
