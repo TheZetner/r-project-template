@@ -17,8 +17,6 @@ This **minimal version** combines the read and tidy scripts and gets rid of the 
 
 4. Select the unzipped template folder then _Create Project_  
 
-Start working!
-
 ## Project Setup with this Template and the Command Line
 
 1. Clone into your project folder with whatever branch you want to choose: eg. minimal or master  
@@ -30,6 +28,7 @@ Start working!
     ```  
 3. Commit and push as normal
 
+Start working!
 
 ---
 
