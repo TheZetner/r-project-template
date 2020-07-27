@@ -19,6 +19,18 @@ This **minimal version** combines the read and tidy scripts and gets rid of the 
 
 Start working!
 
+## Project Setup with this Template and the Command Line
+
+1. Clone into your project folder with whatever branch you want to choose: eg. minimal or master  
+    ```git clone --single-branch --branch <branchname> git@github.com:TheZetner/r-project-template.git <foldername>```  
+2. Modify remotes to your new project's repository: 
+    ```
+    git remote rename origin old-origin
+    git remote add origin https://github.com/TheZetner/<newreponame>
+    ```  
+3. Commit and push as normal
+
+
 ---
 
 ## Explanations
