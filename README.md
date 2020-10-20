@@ -1,11 +1,14 @@
-# R Project Analysis Template - Minimal Version
+# R Project Analysis Template - Executable Package Version
 _Replace this with your actual README file_
 
 This template is meant to guide and structure your analysis projects in R whether or not you use version control (github/gitlab). Feel free to delete the contents of this readme and fill it out again with [markdown formatted text](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 The folder structure helps to organize data and scripts according to their purpose and facilitate easy reuse of project workflows on new datasets. Feel free to delete every portion that doesn't fit your needs.
 
-This **minimal version** combines the read and tidy scripts and gets rid of the *ext* and *doc* folders.  
+This **Executable Package** version adds an `inst` folder which includes two scripts you must modify along with the classic package files: DESCRIPTION and NAMESPACE.  
+
+* `install.sh` - Install from CL into conda env
+* `update.sh` - Update from CL without running the full install script
 
 ## Project Setup with this Template and RStudio
 
@@ -52,6 +55,41 @@ Questions? [adrian.zetner@canada.ca](mailto:adrian.zetner@canada.ca)
 * **R**: Optionally store support functions in individual R files here  
 * **data**: Raw data goes here. Do not modify raw data in place. This isn't Excel.  
 * **output**: Script outputs (eg. cleaned data and figures)  
+* **inst**: Executable scripts to run from CL
+
+### Scripts
+
+#### Install
+
+Create a conda environment and then run the following
+
+```
+sbatch -p NMLResearch -c 1 --mem=4G --wrap="wget -O - https://raw.githubusercontent.com/TheZetner/krakenreports/master/inst/exec/install.sh | bash"
+```
+* Sbatch is only necessary on slurm system
+* Runs install.sh which does the following
+    * Installs...
+        * kraken2 from bioconda
+        * r-base from r
+        * r-base from r
+        * r-essentials from conda-forge
+        * r-xml from conda-forge
+    * Installs R Packages Remotes(CRAN) and Krakenreports(Github)
+    * Copies executable scripts to the bin/ folder of your Conda environment
+
+## How to update (lazily)
+
+To update krakenreports and its executable scripts run the following in your Conda environment. 
+
+```
+sbatch -p NMLResearch -c 1 --mem=4G --wrap="wget -O - https://raw.githubusercontent.com/TheZetner/krakenreports/master/inst/exec/update.sh | bash"
+```
+
+### Executable Scripts
+
+`runkraken.sh` to run kraken2 via sbatch on a folder of fastq files  
+`krakenreports.R` to create plots and reports of the results  
+
 
 ## Resources
 An opinionated [repository template](https://github.blog/2019-06-06-generate-new-repositories-with-repository-templates/)

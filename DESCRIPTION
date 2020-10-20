@@ -1,0 +1,23 @@
+Package: krakenreports
+Title: What the Package Does (One Line, Title Case)
+Version: 0.1.0
+Authors@R: 
+    person(given = "Adrian",
+           family = "Zetner",
+           role = c("aut", "cre"),
+           email = "adrian.zetner@canada.ca")
+Description: Krakenreports includes functions and scripts to accomplish several tasks: first ease of install via conda, second running kraken2 on a slurm cluster against a directory of files, third an executable R script to analyze and visualize the kraken results. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    readr,
+    tidyr,
+    dplyr,
+    ggplot2,
+    purrr,
+    optparse,
+    rentrez,
+    gridExtra
